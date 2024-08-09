@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">DOCTOR APPOINTMENT BOOKING SYSTEM</h1>
+        <h2 class="sub">Book your Appointment now</h2>
+
+        <div class="flex-container">
+            <section id="doctorsSection" class="box">
+                <h2>Available Doctors</h2>
+                <div id="doctorsCardsContainer">
+                    <!-- Doctor cards will be dynamically inserted here -->
+                </div>
+                <br>
+
+                <section id="viewAppointmentsSection">
+                    <h2>View All Appointments</h2>
+                    <button id="viewAppointmentsBtn">View Appointments</button>
+                    <ul id="appointmentsList">
+                        <!-- Appointments will be dynamically inserted here -->
+                    </ul>
+                </section>
+            </section>
+            
+
+            <section id="bookingSection" class="box">
+                <h2>Book an Appointment</h2>
+                <form id="bookingForm">
+                    <label for="doctor">Select Doctor:</label>
+                    <select id="doctor" name="doctor" required></select>
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="time">Time:</label>
+                    <select id="time" name="time" required></select>
+                    
+                    <button type="submit">Book Appointment</button>
+                </form>
+                <div id="bookingMessage"></div>
+            </section>
+        </div>
+
+        
+
+        <section id="cancelAppointmentSection">
+            <h2>Cancel an Appointment</h2>
+            <form id="cancelForm">
+                <label for="appointmentId">Appointment ID:</label>
+                <input type="text" id="appointmentId" name="appointmentId" required>
+                
+                <button type="submit">Cancel Appointment</button>
+            </form>
+            <div id="cancelMessage"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
